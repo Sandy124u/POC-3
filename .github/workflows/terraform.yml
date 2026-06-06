@@ -24,6 +24,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::051404302525:role/Trust-policy-Dev
           aws-region: ap-southeast-2
+          audience: sts.amazonaws.com
 
       - name: Terraform Init (Dev)
         run: terraform init
