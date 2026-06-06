@@ -6,4 +6,5 @@ Edited
 commit
 commit repo name
 S3
+dynomoDb
 ## 🏗️ Structure
