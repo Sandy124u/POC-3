@@ -30,7 +30,7 @@ jobs:
 
       - name: Terraform Plan (Dev)
         run: terraform plan -input=false
-        working-directory: Environment/Dev
+        working-directory: Modules/Environment/Dev
 
       - name: Terraform Apply (Dev)
         run: terraform apply -auto-approve -input=false
