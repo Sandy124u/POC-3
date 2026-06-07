@@ -7,7 +7,7 @@ provider "aws" {
   name        = "${var.env}-ec2-sg"
   description = "Corporate EC2 security group"
   vpc_id      = var.vpc_id */
-
+/* 
   ingress {
     description = "Allow SSH from corporate VPN"
     from_port   = 22
@@ -31,9 +31,9 @@ provider "aws" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-  tags = var.common_tags
-}
+ */
+ /*  tags = var.common_tags
+} */
 
 # EC2 instance referencing existing IAM instance profile
 resource "aws_instance" "corp_ec2" {
