@@ -11,7 +11,7 @@ variable "key_name" {}
 variable "iam_instance_profile" {}
 variable "corp_vpn_cidrs" {}
 variable "app_cidrs" {}
-
+/* 
 variable "vpc_cidr" {
   type = string
 }
@@ -58,4 +58,4 @@ variable "app_cidrs" {
 
 variable "common_tags" {
   type = map(string)
-}
+} */
