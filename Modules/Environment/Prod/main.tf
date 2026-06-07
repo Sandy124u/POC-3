@@ -4,7 +4,7 @@ provider "aws" {
 
 # Call the VPC module
 module "vpc" {
-  source          = "../../Modules/vpc"
+  source          = "../VPC"   # relative path from Environment/Dev or Environment/Prod
   vpc_cidr        = var.vpc_cidr
   public_subnets  = var.public_subnets
   private_subnets = var.private_subnets
@@ -15,12 +15,12 @@ module "vpc" {
 
 # Call the EC2 module, consuming VPC outputs
 module "ec2" {
-  source               = "../../Modules/ec2"
+  source               = "../EC2"   # relative path from Environment/Dev or Environment/Prod
   ami_id               = var.ami_id
   instance_type        = var.instance_type
 
-  # Instead of hard-coded IDs, use VPC module outputs
-  subnet_id            = element(Modules.vpc.private_subnet_ids, 0)
+  # Correct references to module outputs
+  subnet_id            = element(module.vpc.private_subnet_ids, 0)
   vpc_id               = module.vpc.vpc_id
 
   key_name             = var.key_name
