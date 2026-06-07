@@ -4,7 +4,7 @@ provider "aws" {
 
 # Call the VPC module
 module "vpc" {
-  source          = "../VPC"   # relative path from Environment/Dev or Environment/Prod
+  source          = "../../VPC"   # relative path from Environment/Dev or Environment/Prod
   vpc_cidr        = var.vpc_cidr
   public_subnets  = var.public_subnets
   private_subnets = var.private_subnets
@@ -15,7 +15,7 @@ module "vpc" {
 
 # Call the EC2 module, consuming VPC outputs
 module "ec2" {
-  source               = "../EC2"   # relative path from Environment/Dev or Environment/Prod
+  source               = "../../EC2"   # relative path from Environment/Dev or Environment/Prod
   ami_id               = var.ami_id
   instance_type        = var.instance_type
 
