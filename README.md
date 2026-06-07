@@ -9,4 +9,5 @@ S3
 dynomoDb
 s3 name
 bucket policy
+dynmodb
 ## 🏗️ Structure
