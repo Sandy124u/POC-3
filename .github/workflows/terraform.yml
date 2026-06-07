@@ -26,15 +26,15 @@ jobs:
 
       - name: Terraform Init (Dev)
         run: terraform init
-        working-directory: EC2-INFRA/Modules/Environment/Dev
+        working-directory: Modules/Environment/Dev
 
       - name: Terraform Plan (Dev)
         run: terraform plan -input=false
-        working-directory: EC2-INFRA/Modules/Environment/Dev
+        working-directory: Modules/Environment/Dev
 
       - name: Terraform Apply (Dev)
         run: terraform apply -auto-approve -input=false
-        working-directory: EC2-INFRA/Modules/Environment/Dev
+        working-directory: Modules/Environment/Dev
 
   terraform-prod:
     runs-on: ubuntu-latest
@@ -57,12 +57,12 @@ jobs:
 
       - name: Terraform Init (Prod)
         run: terraform init
-        working-directory: EC2-INFRA/Modules/Environment/Prod
+        working-directory: Modules/Environment/Prod
 
       - name: Terraform Plan (Prod)
         run: terraform plan -input=false
-        working-directory: EC2-INFRA/Modules/Environment/Prod
+        working-directory: Modules/Environment/Prod
 
       - name: Terraform Apply (Prod)
         run: terraform apply -auto-approve -input=false
-        working-directory: EC2-INFRA/Modules/Environment/Prod
+        working-directory: Modules/Environment/Prod
