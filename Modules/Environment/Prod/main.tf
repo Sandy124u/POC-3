@@ -20,7 +20,7 @@ module "ec2" {
   instance_type        = var.instance_type
 
   # Instead of hard-coded IDs, use VPC module outputs
-  subnet_id            = element(module.vpc.private_subnet_ids, 0)
+  subnet_id            = element(Modules.vpc.private_subnet_ids, 0)
   vpc_id               = module.vpc.vpc_id
 
   key_name             = var.key_name
