@@ -4,7 +4,7 @@ provider "aws" {
 
 # Call the VPC module
 module "vpc" {
-  source          = "../../modules/vpc"
+  source          = "../../Modules/vpc"
   vpc_cidr        = var.vpc_cidr
   public_subnets  = var.public_subnets
   private_subnets = var.private_subnets
@@ -15,7 +15,7 @@ module "vpc" {
 
 # Call the EC2 module, consuming VPC outputs
 module "ec2" {
-  source               = "../../modules/ec2"
+  source               = "../../Modules/ec2"
   ami_id               = var.ami_id
   instance_type        = var.instance_type
 
