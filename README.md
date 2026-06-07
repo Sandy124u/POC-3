@@ -8,4 +8,5 @@ commit repo name
 S3
 dynomoDb
 s3 name
+bucket policy
 ## 🏗️ Structure
