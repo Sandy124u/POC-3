@@ -1,5 +1,5 @@
 ami_id              = "ami-080beda09284d47e2"
-instance_type       = "t3.large"
+instance_type       = "t3.micro"
 key_name            = "HCL-Project"
 iam_instance_profile = "EC2-SSM-Role"
 env                 = "Dev"

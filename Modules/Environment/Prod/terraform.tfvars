@@ -4,7 +4,7 @@ private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
 azs             = ["ap-southeast-2a", "ap-southeast-2b"]
 
 ami_id               = "ami-080beda09284d47e2"
-instance_type        = "t3.large"
+instance_type        = "t3.micro"
 key_name             = "HCL-Project"
 iam_instance_profile = "EC2-SSM-Role"
 env                  = "prod"
