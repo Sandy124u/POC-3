@@ -61,7 +61,7 @@ jobs:
 
       - name: Terraform Plan (Prod)
         run: terraform plan -input=false
-        working-directory: Environment/Prod
+        working-directory: Modules/Environment/Prod
 
       - name: Terraform Apply (Prod)
         run: terraform apply -auto-approve -input=false
