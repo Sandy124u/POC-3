@@ -42,6 +42,7 @@ resource "aws_instance" "corp_ec2" {
   subnet_id              = var.subnet_id
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   key_name               = var.key_name
+  associate_public_ip_address = true
 
   # Reference existing IAM instance profile created in console
   iam_instance_profile   = "EC2-SSM-Role"
